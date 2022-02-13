@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/main.css">
+    <title>Calculate</title>
+</head>
+<body>
+    <header>
+<h1>Калькулятор витрат</h1>
+    </header>
+    <div class="container">
+        <div class="wrapper">
+        <div class="choise">
+            <p class="title">Вид продукту</p> 
+        </div>
+        <div class="content">
+        <div class="name-product">
+            <h4 class="vareniks-potato">
+                Вареники з картоплею
+            </h4>
+            <fieldset class="for-patepos">
+                <form>
+                <div class="image">
+                    <img src="/img/potato.jpg" alt="">
+                </div>
+                <div class="products">
+                <p>Мука:</p> <input type="number" class="flour" placeholder="ціна за мішок" required></input> 
+                <p>Картопля:</p> <input type="number" class="potato" placeholder="ціна за кг" required></input> 
+                <p>Маргарин:</p> <input type="number" class="margarine" placeholder="ціна за 1 пачку" required></input> 
+                <p>Цибуля:</p> <input type="number" class="onion" placeholder="ціна за кг" required></input> 
+                <p>Олій:</p> <input type="number" class="olis" placeholder="ціна за 1 л" required></input> 
+                <p>Світло:</p> <input type="number" class="light" placeholder="ціна" required></input> 
+            </div>
+                <div class="count">
+                    <button class="total" type="submit">
+                       Total
+                    </button>
+                    <div class="result result-potato">
+
+                    </div>
+                </div>
+            </form>
+            </fieldset> 
+            
+        </div>
+        <div class="name-product">
+            <h4 class="vareniks-chease">
+                Вареники з сиром
+            </h4>
+            <fieldset class="for-chease">
+                <form>
+                    <div class="image">
+                        <img src="/img/chease.jpg" alt="">
+                    </div>
+                    <div class="products for-chease">
+                <p>Мука:</p> <input type="number" class="flour" placeholder="ціна за мішок" required></input>
+                <p>сиром:</p> <input type="number" class="chease" placeholder="ціна за 1кг" required></input>
+                <p>Маргарин:</p> <input type="number" class="margarine" placeholder="ціна за 1 пачку" required></input>
+                <p>Яйця:</p> <input type="number" class="eggs" placeholder="ціна за 1 шт" required></input>
+                <p>Світло:</p> <input type="number" class="light" placeholder="ціна" required></input>
+                </div>
+                <div class="count">
+                    <button class="total" type="submit">
+                        Total
+                     </button>
+                     <div class="result result-chease">
+ 
+                     </div>
+                </div>
+            </form>
+            </fieldset>
+            
+        </div>
+        <div class="name-product">
+            <h4 class="dumplings">
+                Пельмені
+            </h4>
+            <fieldset class="for-dumpl"> 
+                <form> 
+                    <div class="image">
+                        <img src="/img/dumplings.jpg" alt="">
+                    </div>
+                    <div class="products for-dumpl">
+                <p>Мука:</p> <input type="number" class="flour" placeholder="ціна за мішок" required></input>
+                <p>Маргарин:</p> <input type="number" class="margarine" placeholder="ціна за 1 пачку" required></input>
+                <p>Світло:</p> <input type="number" class="light" placeholder="ціна" required></input>
+            </div>
+                <div class="count">
+                    <button class="total" type="submit">
+                        Total
+                     </button>
+                     <div class="result result-dumpl">
+ 
+                     </div>
+                </div>
+            </form>
+            </fieldset>
+           
+        </div> 
+     </div>
+    </div>
+        
+
+    </div>
+    <footer>
+
+    </footer>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
