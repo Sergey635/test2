@@ -4,7 +4,7 @@ const flourForKg = 0.47,
 
 let flour = $('fieldset').find('.flour'),
     potato = $('fieldset').find('.potato'),
-    chease = $('fieldset').find('.chease'),
+    cheese = $('fieldset').find('.cheese'),
     margarine = $('fieldset').find('.margarine'),
     onion = $('fieldset').find('.onion'),
     olis = $('fieldset').find('.olis'),
@@ -40,16 +40,19 @@ $('.total').on('click', function() {
 
     if ($('.vareniks-potato').parent().hasClass('active') == true) {
         let finalPotatoPrice = parseFloat(GetPotatoPrice()).toFixed(2);
+        $('.finish-price').val(finalPotatoPrice);
         
         $('.result-potato').show().text('На 1 кг продукту затрачено ' + finalPotatoPrice + ' грн')
 
-    }else if ($('.vareniks-chease').parent().hasClass('active') == true) {
-        let finalCheasePrice = parseFloat(GetCheasePrice()).toFixed(2);
-        $('.result-chease').show().text('На 1 кг продукту затрачено ' + finalCheasePrice + ' грн')
+    }else if ($('.vareniks-cheese').parent().hasClass('active') == true) {
+        let finalcheesePrice = parseFloat(GetcheesePrice()).toFixed(2);
+        $('.finish-price').val(finalcheesePrice);
+        $('.result-cheese').show().text('На 1 кг продукту затрачено ' + finalcheesePrice + ' грн')
 
 
     }else if ($('.dumplings').parent().hasClass('active') == true) {
         let finalDumplPrice = parseFloat(GetDumplingsPrice()).toFixed(2);
+        $('.finish-price').val(finalDumplPrice);
         $('.result-dumpl').show().text('На 1 кг продукту затрачено ' + finalDumplPrice + ' грн')
 
     }
@@ -81,9 +84,9 @@ $('.total').on('click', function() {
 
         return total;
     };
-    let GetCheasePrice = function() {
+    let GetcheesePrice = function() {
         let flourPrice = $('.active').find(flour).val(),
-        cheasePrice = $('.active').find(chease).val(),
+        cheesePrice = $('.active').find(cheese).val(),
         margarinePrice = $('.active').find(margarine).val(),
         eggsPrice = $('.active').find(eggs).val(),
         lightPrice = $('.active').find(light).val(),
@@ -91,11 +94,11 @@ $('.total').on('click', function() {
 
         let flourCost = (flourPrice/50) * flourForKg,
             margarineCost = margarinePrice * margarineForKg,
-            cheaseCoast = cheasePrice * 0.25, 
+            cheeseCoast = cheesePrice * 0.25, 
             eggsCoast = eggsPrice * 0.15,
             lightCoast = lightPrice * 0.15;
 
-        total = flourCost + margarineCost + cheaseCoast +eggsCoast +lightCoast;
+        total = flourCost + margarineCost + cheeseCoast +eggsCoast +lightCoast;
 
         return total;
 
